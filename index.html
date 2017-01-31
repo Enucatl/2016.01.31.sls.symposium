@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Progress report</title>
+<meta charset='utf-8'>
+<meta content='7th progress report' name='description'>
+<meta content='Matteo Abis' name='author'>
+<meta content='yes' name='apple-mobile-web-app-capable'>
+<meta content='black-translucent' name='apple-mobile-web-app-status-bar-style'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="stylesheets/all.css" rel="stylesheet" />
+<link href="vendor/eth-reveal-theme/eth.css" rel="stylesheet" id="theme" />
+<script src="vendor/reveal/lib/js/head.min.js"></script>
+<script src="javascripts/reveal_print_pdf.js"></script>
+<!--[if lt IE 9]>
+<script src="vendor/reveal.js/lib/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+<body class='index'>
+<div class='reveal'>
+<img align='left' alt='ETH Logo' src='vendor/eth-reveal-theme/images/eth-logo.jpg' width='15%'>
+<img align='right' alt='PSI Logo' src='vendor/eth-reveal-theme/images/psi-logo.jpg' width='15%'>
+<div class='slides'>
+<section data-background-position='bottom' data-background-size='100%' data-background='vendor/eth-reveal-theme/images/ETHbackground.png'>
+<h2>High-energy interferometry on X-ray tubes</h2>
+<h4><i>M. Abis</i>, G. Lovrić, M. Büchner, Z. Wang, M. Stampanoni</h4>
+</section>
+<section>
+<h2>Goals and motivation</h2>
+<ul>
+<li>feasibility of phase contrast on tubes with \(>100\) kVp</li>
+<li>typical environment for medical, security and material science applications</li>
+</ul>
+</section>
+<section>
+<h2>Grating interferometry</h2>
+<img src="images/hDPC_setup.png" style="width: 30vw" alt="Hdpc setup" />
+</section>
+<section>
+<h2>Grating interferometry</h2>
+<h3>phase stepping</h3>
+<img src="images/phase_stepping.png" style="width: 30vw" alt="Phase stepping" />
+</section>
+<section>
+<h2>\( n = 1 - \delta + i \beta \)</h2>
+<div class='div'>
+<img src="images/ps.png" style="width: 30vw" alt="Ps" />
+</div>
+<ul>
+<li>ratio of the averages \(A\) &rightarrow; \( \beta \)</li>
+<li>phase difference &rightarrow; \( \delta \)</li>
+<li>ratio of the amplitudes \(B\) &rightarrow; scattering</li>
+</ul>
+</section>
+<section>
+<h2>High aspect ratio</h2>
+<div class='div col-md-6'>
+<img src="images/140217_bosch_p1um_01.png" style="width: 30vw" alt="140217 bosch p1um 01" />
+</div>
+<div class='div col-md-6'>
+<img src="images/140505_old_au01.png" style="width: 30vw" alt="140505 old au01" />
+</div>
+</section>
+<section>
+<h2>Grating parameters</h2>
+<ul>
+<li>80-140 μm Au absorption thickness</li>
+<li>5.4 μm period</li>
+<li>\(\pi\) shift 45 keV</li>
+</ul>
+<img src="images/visibility_energy.png" style="width: 30vw" alt="Visibility energy" />
+</section>
+<section>
+<section>
+<h2>Silica microspheres</h2>
+<p>\(R = \frac{\log(\text{dark field})}{\log(\text{absorption})}\)</p>
+<img src="images/SIo2MS_1_8_890nm.jpg" style="width: 20vw" alt="Sio2ms 1 8 890nm" />
+</section>
+<section>
+<h2>Grating interferometry</h2>
+<h3>phase stepping</h3>
+<img src="images/phase_stepping.png" style="width: 30vw" alt="Phase stepping" />
+</section>
+</section>
+<section>
+<h2>Effects of microstructure</h2>
+<ul>
+<li>
+Lynch et al.
+\[
+\mu_d = \frac{3\pi}{\lambda^2}f |\Delta n|^2 d
+\begin{cases}
+D' & \text{if } D' \leqslant 1\\[2ex]
+\!\begin{align}
+D' - \sqrt{D'^2 - 1}\\
+(1 + D'^{-2}/2) \\
++ (D'^{-1} + D'^{-3} / 4) \\
+\log\left(\frac{D' + \sqrt{D'^2 - 1}}{D' - \sqrt{D'^2 - 1}}\right)
+\end{align} & \text{otherwise}
+\end{cases}
+\]
+</li>
+<li>dark field as a function of sphere diameter and photon energy</li>
+</ul>
+</section>
+<section>
+<h2>Incoherent sum over the spectrum</h2>
+<p>
+\[
+R(\energy) = \frac{\log B}{\log A} = \frac{\mu_d}{2k\beta}
+\]
+</p>
+<p>
+\[
+R = C\frac{\sum_\energy w(\energy)|\Delta n(\energy)|^2 \energy u(\energy)}{\sum_\energy w(\energy) \energy \beta}
+\]
+</p>
+<p>where \(w(\energy)\) are the spectral weights, and \(u(\energy)\) is the conditional from Lynch</p>
+<p>only one fit parameter: \(C\)</p>
+</section>
+<section>
+<h2>Microsphere samples</h2>
+<img src="images/summary.png" style="width: 35vw" alt="Summary" />
+</section>
+<section>
+<h2>Combine beamline + tube</h2>
+<h4>courtesy of Goran Lovric</h4>
+<img src="images/goran/image8.png" style="width: 30vw" alt="Image8" />
+<img src="images/goran/image7.png" style="width: 30vw" alt="Image7" />
+</section>
+<section>
+<h2>Align the same region</h2>
+<ul>
+<li>detailed beamline tomography, resolving the microstructure</li>
+<li>comparison with integrated tube data</li>
+</ul>
+<img src="images/goran/image15.png" style="width: 30vw" alt="Image15" />
+</section>
+<section>
+<h2>Beamline scans</h2>
+<p>Negative result (no structural difference)</p>
+<div class='div col-md-6'>
+<p>control</p>
+<img src="images/goran/image16.jpeg" style="width: 30vw" alt="Image16" />
+</div>
+<div class='div col-md-6'>
+<p>smoke</p>
+<img src="images/goran/image17.jpeg" style="width: 30vw" alt="Image17" />
+</div>
+</section>
+<section>
+<h2>Tube scans</h2>
+<img src="images/goran/image14.png" style="width: 30vw" alt="Image14" />
+</section>
+<section>
+<h2>Tube results</h2>
+<h4>(also negative)</h4>
+<img src="images/lung_samples_tube.png" style="width: 30vw" alt="Lung samples tube" />
+</section>
+<section>
+<h2>Conclusions</h2>
+<ul>
+<li>Operational setup that can be coordinated with beamline experiments</li>
+<li>Finally good understanding of dark-field interactions at high energies</li>
+</ul>
+<h2>Next experiments</h2>
+<ul>
+<li>Medical: new rat samples from Bern</li>
+<li>Material science: water diffusion in concrete</li>
+</ul>
+</section>
+<section>
+<h2>Thanks for your attention</h2>
+</section>
+
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="javascripts/all.js"></script>
+</body>
+</html>
